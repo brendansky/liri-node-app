@@ -14,13 +14,14 @@ var parameter = process.argv[3];
 function askSpotify() {
 
     spotify
-        .request('https://api.spotify.com/v1/search?q=thriller&type=track')
+        .request('https://api.spotify.com/v1/tracks/7yCPwWs66K8Ba5lFuU2bcx')
         .then(function (data) {
             console.log(data);
         })
         .catch(function (err) {
             console.error('Error occurred: ' + err);
         });
+
 };
 
 function askTwitter() {
@@ -78,3 +79,4 @@ if (action === "spotify-this-song") {
 console.log("hello");
 
 
+askSpotify();
